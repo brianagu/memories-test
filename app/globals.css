@@ -45,10 +45,23 @@ body {
     font-size: 12px;
   }
 
+  nav {
+    font-size: 12px;
+  }
+
   .content-grid {
     grid-template-columns: repeat(6, 1fr);
     column-gap: 32px;
     padding-inline: 40px;
+  }
+
+  /* Reduce caption font sizes */
+  .text-sm {
+    font-size: 12px;
+  }
+
+  .text-xs {
+    font-size: 11px;
   }
 
   /* Updated S variant positions for smaller screens */
