@@ -80,10 +80,6 @@ body {
     padding-inline: 40px;
   }
 
-  /* DEBUG: Test if media query is applied */
-  main {
-    background-color: rgba(255, 0, 0, 0.1) !important;
-  }
 
   /* Reduce caption font sizes */
   .text-sm {
@@ -94,11 +90,12 @@ body {
     font-size: 11px;
   }
 
-  /* Reduce vertical spacing between components from 200px to 100px */
-  .space-y-\[200px\] > * {
+  /* Reduce vertical spacing - match Tailwind's exact selector with higher specificity */
+  .space-y-\[200px\] > * + * {
     margin-top: 100px !important;
   }
 
+  /* Remove margin from first child */
   .space-y-\[200px\] > :first-child {
     margin-top: 0 !important;
   }
