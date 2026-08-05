@@ -80,6 +80,11 @@ body {
     padding-inline: 40px;
   }
 
+  /* DEBUG: Test if media query is applied */
+  main {
+    background-color: rgba(255, 0, 0, 0.1) !important;
+  }
+
   /* Reduce caption font sizes */
   .text-sm {
     font-size: 12px;
