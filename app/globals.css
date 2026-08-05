@@ -89,14 +89,9 @@ body {
     font-size: 11px;
   }
 
-  /* Reduce vertical spacing between components */
-  .space-y-\[200px\] {
-    --space-y: 100px;
-  }
-
-  .space-y-\[200px\] > * + * {
+  /* Reduce vertical spacing between components from 200px to 100px */
+  .space-y-\[200px\] > :nth-child(n + 2) {
     margin-top: 100px !important;
-    margin-bottom: 0 !important;
   }
 
   /* Updated S variant positions for smaller screens */
