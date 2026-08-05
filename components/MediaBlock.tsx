@@ -94,7 +94,7 @@ export function MediaBlock({ asset }: MediaBlockProps) {
           </motion.div>
 
           {/* Caption */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-0">
             <div className="text-sm text-white" style={{ fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif' }}>
               <span className="font-medium" style={{ fontWeight: 500 }}>
                 {asset.title}
