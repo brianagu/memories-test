@@ -10,7 +10,7 @@ export function Nav() {
 
   return (
     <nav className="sticky top-0 z-50 w-full">
-      <div className="content-grid pt-[40px]" style={navStyle}>
+      <div className="content-grid pt-[24px]" style={navStyle}>
         {/* Brian Aguilar - columns 1-4 */}
         <div style={{ gridColumn: '1 / 5' }}>
           {SITE_CONFIG.nav.name}
