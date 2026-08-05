@@ -90,15 +90,7 @@ body {
     font-size: 11px;
   }
 
-  /* Reduce vertical spacing - match Tailwind's exact selector with higher specificity */
-  .space-y-\[200px\] > * + * {
-    margin-top: 100px !important;
-  }
-
-  /* Remove margin from first child */
-  .space-y-\[200px\] > :first-child {
-    margin-top: 0 !important;
-  }
+  /* Spacing is now handled in Gallery.tsx with useMediaQuery hook */
 
   /* Updated S variant positions for smaller screens */
   .s-left { --grid-col: 1 / 5; }

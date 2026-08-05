@@ -10,10 +10,27 @@ interface GalleryProps {
   assets: MediaAsset[];
 }
 
+function useMediaQuery(query: string): boolean {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    media.addEventListener('change', listener);
+    return () => media.removeEventListener('change', listener);
+  }, [matches, query]);
+
+  return matches;
+}
+
 export function Gallery({ assets }: GalleryProps) {
   const [shuffled, setShuffled] = useState<ShuffledAsset[]>([]);
   const [mounted, setMounted] = useState(false);
   const [showGrid, setShowGrid] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 1014px)');
 
   useEffect(() => {
     // Only shuffle on client after mount to avoid hydration mismatch
@@ -33,8 +50,9 @@ export function Gallery({ assets }: GalleryProps) {
   }, [assets]);
 
   if (!mounted) {
+    const spacingClass = isMobile ? 'space-y-[100px]' : 'space-y-[200px]';
     return (
-      <div className="space-y-[200px]">
+      <div className={spacingClass}>
         {Array.from({ length: 3 }).map((_, i) => (
           <div key={i} className="h-96 animate-pulse bg-white/5 rounded-lg" />
         ))}
@@ -50,11 +68,13 @@ export function Gallery({ assets }: GalleryProps) {
     );
   }
 
+  const spacingClass = isMobile ? 'space-y-[100px]' : 'space-y-[200px]';
+
   return (
     <>
       {showGrid && <GridOverlay />}
 
-      <div className="space-y-[200px]">
+      <div className={spacingClass}>
         {shuffled.map((asset, index) => (
           <MediaBlock key={`${asset.src}-${index}`} asset={asset} />
         ))}
