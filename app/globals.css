@@ -53,13 +53,24 @@ body {
     font-size: 12px !important;
   }
 
-  /* Adjust nav layout for mobile */
+  /* Adjust nav layout for mobile - stack "In Progress" under "Brian Aguilar" */
+  nav .content-grid {
+    grid-auto-rows: auto;
+  }
+
+  nav .content-grid > div:nth-child(1) {
+    grid-column: 1 / 5 !important;
+    grid-row: 1;
+  }
+
   nav .content-grid > div:nth-child(2) {
-    grid-column: 3 / 6 !important;
+    grid-column: 1 / 6 !important;
+    grid-row: 2;
   }
 
   nav .content-grid > div:nth-child(3) {
     grid-column: 6 / 7 !important;
+    grid-row: 1;
     text-align: right !important;
   }
 
