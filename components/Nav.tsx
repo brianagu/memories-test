@@ -32,13 +32,12 @@ export function Nav() {
             href="https://instagram.com/brianagu"
             target="_blank"
             rel="noopener noreferrer"
+            className="transition-opacity hover:opacity-70"
             style={{
               color: '#ffffff',
               textDecoration: 'none',
               cursor: 'pointer',
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.7')}
-            onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
           >
             {SITE_CONFIG.nav.handle}
           </a>
