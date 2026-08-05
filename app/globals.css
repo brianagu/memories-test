@@ -90,8 +90,12 @@ body {
   }
 
   /* Reduce vertical spacing between components from 200px to 100px */
-  .space-y-\[200px\] > :nth-child(n + 2) {
+  .space-y-\[200px\] > * {
     margin-top: 100px !important;
+  }
+
+  .space-y-\[200px\] > :first-child {
+    margin-top: 0 !important;
   }
 
   /* Updated S variant positions for smaller screens */
