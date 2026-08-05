@@ -41,8 +41,10 @@ export function MediaBlock({ asset }: MediaBlockProps) {
     <div className="content-grid">
       {/* Content block container - flexible height, positioned via grid-column */}
       <motion.div
-        className="relative"
-        style={{ gridColumn: variant.gridColumn }}
+        className={`relative ${asset.variant.toLowerCase().replace('-', '-')}`}
+        style={{
+          gridColumn: 'var(--grid-col, ' + variant.gridColumn + ')',
+        }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ margin: '0px 0px 0px 0px' }}
