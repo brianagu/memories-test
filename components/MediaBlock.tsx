@@ -50,11 +50,6 @@ export function MediaBlock({ asset }: MediaBlockProps) {
         viewport={{ margin: '0px 0px 0px 0px' }}
         transition={{ duration: 0.8 }}
       >
-        {/* Variant label - debug display */}
-        <div className="absolute top-0 left-0 text-xs font-medium text-white/40 pointer-events-none z-10 bg-white/5 px-2 py-1 rounded">
-          {asset.variant}
-        </div>
-
         {/* Inner container for media + caption */}
         <div className="flex flex-col gap-4">
           {/* Media - Image or Video */}
