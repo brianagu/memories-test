@@ -28,7 +28,20 @@ export function Nav() {
             textAlign: 'right',
           }}
         >
-          {SITE_CONFIG.nav.handle}
+          <a
+            href="https://instagram.com/brianagu"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: '#ffffff',
+              textDecoration: 'none',
+              cursor: 'pointer',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.7')}
+            onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+          >
+            {SITE_CONFIG.nav.handle}
+          </a>
         </div>
       </div>
     </nav>
