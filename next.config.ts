@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    // Disable the Vercel dev toolbar in lower left
+    vercelToolbarEnabled: false,
+  },
 };
 
 export default nextConfig;
