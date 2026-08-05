@@ -41,21 +41,26 @@ body {
 
 /* Below 1015px: Switch to 6-column grid layout */
 @media (max-width: 1014px) {
+  body {
+    font-size: 14px;
+  }
+
   .content-grid {
     grid-template-columns: repeat(6, 1fr);
     column-gap: 40px;
+    padding-inline: 40px;
   }
 
-  /* Map 12-column positions to 6-column positions */
-  .s-left { --grid-col: 1 / 3; }
-  .s-right { --grid-col: 5 / 7; }
-  .s-center { --grid-col: 2 / 4; }
+  /* Updated S variant positions for smaller screens */
+  .s-left { --grid-col: 1 / 5; }
+  .s-right { --grid-col: 2 / 7; }
+  .s-center { --grid-col: 2 / 6; }
 
   .m-left { --grid-col: 1 / 5; }
   .m-right { --grid-col: 3 / 7; }
   .m-center { --grid-col: 2 / 6; }
 
-  .l-center { --grid-col: 1 / 6; }
+  .l-center { --grid-col: 1 / 7; }
 
   .full { --grid-col: 1 / 7; }
 }
