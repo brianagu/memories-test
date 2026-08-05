@@ -46,7 +46,11 @@ body {
   }
 
   nav {
-    font-size: 12px;
+    font-size: 12px !important;
+  }
+
+  nav > div > div {
+    font-size: 12px !important;
   }
 
   .content-grid {
