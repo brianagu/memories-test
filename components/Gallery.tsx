@@ -79,11 +79,6 @@ export function Gallery({ assets }: GalleryProps) {
           <MediaBlock key={`${asset.src}-${index}`} asset={asset} />
         ))}
       </div>
-
-      {/* Grid toggle hint */}
-      <div className="fixed bottom-4 right-4 text-xs text-white/40 pointer-events-none">
-        Press Cmd+G to toggle grid
-      </div>
     </>
   );
 }
