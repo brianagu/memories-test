@@ -42,23 +42,23 @@ body {
 /* Below 1015px: Switch to 6-column grid layout */
 @media (max-width: 1014px) {
   body {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .content-grid {
     grid-template-columns: repeat(6, 1fr);
-    column-gap: 40px;
+    column-gap: 32px;
     padding-inline: 40px;
   }
 
   /* Updated S variant positions for smaller screens */
   .s-left { --grid-col: 1 / 5; }
-  .s-right { --grid-col: 2 / 7; }
+  .s-right { --grid-col: 3 / 7; }
   .s-center { --grid-col: 2 / 6; }
 
-  .m-left { --grid-col: 1 / 5; }
-  .m-right { --grid-col: 3 / 7; }
-  .m-center { --grid-col: 2 / 6; }
+  .m-left { --grid-col: 1 / 6; }
+  .m-right { --grid-col: 2 / 7; }
+  .m-center { --grid-col: 1 / 7; }
 
   .l-center { --grid-col: 1 / 7; }
 
