@@ -89,6 +89,11 @@ body {
     font-size: 11px;
   }
 
+  /* Reduce vertical spacing between components */
+  .space-y-\[200px\] > * + * {
+    margin-top: 100px !important;
+  }
+
   /* Updated S variant positions for smaller screens */
   .s-left { --grid-col: 1 / 5; }
   .s-right { --grid-col: 3 / 7; }
