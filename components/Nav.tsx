@@ -1,6 +1,11 @@
+'use client';
+
 import { SITE_CONFIG } from '@/config/site';
+import { useOverlay } from '@/components/OverlayContext';
 
 export function Nav() {
+  const { isOpen, toggle } = useOverlay();
+
   const navStyle = {
     fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif',
     fontWeight: 500,
@@ -16,31 +21,58 @@ export function Nav() {
           {SITE_CONFIG.nav.name}
         </div>
 
-        {/* In Progress, 2016 - - columns 5-8 */}
+        {/* In Progress, 2016 – + additional detail when overlay open - columns 5-8 */}
         <div style={{ gridColumn: '5 / 9' }}>
-          {SITE_CONFIG.nav.tagline}
+          <div>{SITE_CONFIG.nav.tagline}</div>
+          {isOpen && (
+            <div className="overlay-text mt-[18px]">
+              <p style={{ margin: 0, marginBottom: '18px' }}>
+                A collection of memories presented as random moments.
+                Developed as an interactive experience inspired by the randomness of memory recall, no visit is the same.
+              </p>
+              <a
+                href="https://instagram.com/brianagu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-opacity hover:opacity-70"
+                style={{
+                  color: '#ffffff',
+                  textDecoration: 'underline',
+                  cursor: 'pointer',
+                  display: 'inline-block',
+                }}
+              >
+                {SITE_CONFIG.nav.handle}
+              </a>
+            </div>
+          )}
         </div>
 
-        {/* @brianagu - columns 9-12 */}
+        {/* Toggle "More detail" / "Show less" - columns 9-12 */}
         <div
           style={{
             gridColumn: '9 / 13',
             textAlign: 'right',
           }}
         >
-          <a
-            href="https://instagram.com/brianagu"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={toggle}
             className="transition-opacity hover:opacity-70"
             style={{
               color: '#ffffff',
-              textDecoration: 'none',
+              textDecoration: 'underline',
               cursor: 'pointer',
+              background: 'none',
+              border: 'none',
+              fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif',
+              fontWeight: 500,
+              fontSize: '14px',
+              padding: 0,
             }}
           >
-            {SITE_CONFIG.nav.handle}
-          </a>
+            {isOpen ? 'Show less' : 'More detail'}
+          </button>
         </div>
       </div>
     </nav>

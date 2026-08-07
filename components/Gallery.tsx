@@ -5,6 +5,7 @@ import type { MediaAsset } from '@/lib/media';
 import { shuffleAndAssignVariants, type ShuffledAsset } from '@/lib/shuffle';
 import { MediaBlock } from './MediaBlock';
 import { GridOverlay } from './GridOverlay';
+import { useOverlay } from '@/components/OverlayContext';
 
 interface GalleryProps {
   assets: MediaAsset[];
@@ -31,6 +32,7 @@ export function Gallery({ assets }: GalleryProps) {
   const [mounted, setMounted] = useState(false);
   const [showGrid, setShowGrid] = useState(false);
   const isMobile = useMediaQuery('(max-width: 1014px)');
+  const { isOpen } = useOverlay();
 
   useEffect(() => {
     // Only shuffle on client after mount to avoid hydration mismatch
@@ -74,7 +76,14 @@ export function Gallery({ assets }: GalleryProps) {
     <>
       {showGrid && <GridOverlay />}
 
-      <div className={spacingClass}>
+      <div
+        className={spacingClass}
+        style={{
+          opacity: isOpen ? 0.15 : 1,
+          filter: isOpen ? 'blur(10px)' : 'blur(0px)',
+          transition: 'opacity 0.4s ease, filter 0.4s ease',
+        }}
+      >
         {shuffled.map((asset, index) => (
           <MediaBlock key={`${asset.src}-${index}`} asset={asset} />
         ))}
