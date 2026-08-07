@@ -52,11 +52,8 @@ export function Nav() {
           <button
             type="button"
             onClick={toggle}
-            className="transition-opacity hover:opacity-70"
+            className="nav-link"
             style={{
-              color: '#ffffff',
-              textDecoration: 'underline',
-              cursor: 'pointer',
               background: 'none',
               border: 'none',
               fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif',
