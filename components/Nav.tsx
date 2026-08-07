@@ -22,10 +22,10 @@ export function Nav() {
         </div>
 
         {/* In Progress, 2016 – + additional detail when overlay open - columns 5-8 */}
-        <div style={{ gridColumn: '5 / 9' }}>
+        <div style={{ gridColumn: '5 / 9', position: 'relative' }}>
           <div>{SITE_CONFIG.nav.tagline}</div>
           {isOpen && (
-            <div className="overlay-text mt-[18px]">
+            <div className="overlay-text" style={{ position: 'absolute', top: '100%', marginTop: '18px' }}>
               <p style={{ margin: 0, marginBottom: '18px' }}>
                 A collection of memories presented as random moments.
                 Developed as an interactive experience inspired by the randomness of memory recall, no visit is the same.

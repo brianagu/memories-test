@@ -53,9 +53,15 @@ body {
     font-size: 12px !important;
   }
 
+  /* "More detail"/"Show less" button font size */
+  nav button {
+    font-size: 12px !important;
+  }
+
   /* Adjust nav layout for mobile - stack "In Progress" under "Brian Aguilar" */
   nav .content-grid {
     grid-auto-rows: auto;
+    row-gap: 0;
   }
 
   nav .content-grid > div:nth-child(1) {
