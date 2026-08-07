@@ -34,13 +34,7 @@ export function Nav() {
                 href="https://instagram.com/brianagu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-70"
-                style={{
-                  color: '#ffffff',
-                  textDecoration: 'underline',
-                  cursor: 'pointer',
-                  display: 'inline-block',
-                }}
+                className="nav-link"
               >
                 {SITE_CONFIG.nav.handle}
               </a>

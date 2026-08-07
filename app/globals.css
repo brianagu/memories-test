@@ -117,6 +117,19 @@ body {
   }
 }
 
+/* Nav link styles */
+.nav-link {
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+  transition: text-decoration 0.2s ease;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+}
+
 /* Grid overlay - visual debug layer showing the 12-column grid */
 .grid-overlay {
   position: fixed;
