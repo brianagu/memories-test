@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Brian Aguilar",
+  title: "Brian Aguilar, In Progress, 2016 –",
   description: "Photo portfolio",
 };
 
