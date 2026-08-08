@@ -26,9 +26,9 @@ export function Nav() {
           <div>{SITE_CONFIG.nav.tagline}</div>
           {isOpen && (
             <div className="overlay-text" style={{ position: 'absolute', top: '100%', marginTop: '18px' }}>
-              <p style={{ margin: 0, marginBottom: '18px' }}>
-                A collection of memories presented as random moments.
-                Developed as an interactive experience inspired by the randomness of memory recall, no visit is the same.
+              <p style={{ margin: 0, marginBottom: '18px', lineHeight: '1.6' }}>
+                In Progress, 2016 –<br /><br />
+                Inspired by the randomness of memory recall, this collection of moments captured since 2016 is presented as spontaneous snapshots of nostalgia. Each visit is a wholly unique display of composition and order.
               </p>
               <a
                 href="https://instagram.com/brianagu"
@@ -62,7 +62,7 @@ export function Nav() {
               padding: 0,
             }}
           >
-            {isOpen ? 'Show less' : 'More detail'}
+            {isOpen ? 'close' : 'About'}
           </button>
         </div>
       </div>
