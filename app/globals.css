@@ -115,6 +115,10 @@ body {
   .overlay-text {
     max-width: 380px;
   }
+
+  .overlay-text p {
+    line-height: 18px !important;
+  }
 }
 
 /* Nav link styles */
