@@ -27,7 +27,7 @@ export function Nav() {
           {isOpen && (
             <div className="overlay-text" style={{ position: 'absolute', top: '100%', marginTop: '18px' }}>
               <p style={{ margin: 0, marginBottom: '18px', lineHeight: '1.6' }}>
-                Inspired by the randomness of memory recall, this collection of moments captured since 2016 is presented as spontaneous snapshots of nostalgia. Each visit is a wholly unique display of composition and order.<br /><br />
+                Inspired by the randomness of memory recall, this collection of moments captured since 2016 is presented as spontaneous snapshots of nostalgia. Each visit is a wholly unique display of composition and order.
               </p>
               <a
                 href="https://instagram.com/brianagu"
